@@ -11,7 +11,7 @@
    ```
 2. **Frontend**
    ```bash
-   cd ../frontend
+   cd frontend
    cp .env.example .env
    npm i
    npm run dev
@@ -98,7 +98,7 @@ Admins can manage all books, monitor user activity, and view library statistics 
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/mern-library.git
-cd mern-library
+git clone https://github.com/vibinab/merntest.git
+
 
 
