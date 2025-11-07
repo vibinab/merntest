@@ -1,0 +1,12 @@
+import { Router } from "express";
+import { auth } from "../middleware/auth.js";
+import * as ctrl from "../controllers/books.controller.js";
+const r = Router();
+r.post("/", auth(["admin"]), ctrl.createBook);
+r.get("/", ctrl.getBooks);
+r.get("/search", ctrl.searchBooks);
+r.get("/:id", ctrl.getBookById);
+r.put("/:id", auth(["admin"]), ctrl.updateBook);
+r.delete("/:id", auth(["admin"]), ctrl.deleteBook);
+r.patch("/:id/stock", auth(["admin"]), ctrl.updateStock);
+export default r;
